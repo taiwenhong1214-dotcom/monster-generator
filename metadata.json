@@ -1,0 +1,6 @@
+{
+  "name": "FPS怪物概念生成器",
+  "description": "专为FPS手游概念设计打造的灵感生成与草图创作工具，支持基底、武器化、视觉主题随机三合一组合、词库管理与每日速写打卡记录。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
