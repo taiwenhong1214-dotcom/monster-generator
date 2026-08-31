@@ -1,0 +1,1 @@
+if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/monster-generator/sw.js', { scope: '/monster-generator/' })})}

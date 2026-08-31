@@ -1,0 +1,16 @@
+{
+  "name": "FPS怪物概念生成器",
+  "short_name": "怪物生成器",
+  "description": "专为FPS手游怪物概念设计与每日速写打卡打造的灵感工具",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#f59e0b",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
