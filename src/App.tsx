@@ -433,11 +433,11 @@ export default function App() {
           </div>
 
           {/* Action Toolbar */}
-          <div className="flex items-center gap-2 flex-wrap">
+          <div className="flex sm:items-center gap-2 overflow-x-auto pb-2 sm:pb-0 scrollbar-hide -mx-2 px-2 sm:mx-0 sm:px-0">
             {/* Daily Streak / Done Badge */}
-            <div className="flex items-center gap-1.5 bg-neutral-900 border border-neutral-800 px-3 py-1.5 rounded-xl text-xs">
+            <div className="flex items-center shrink-0 gap-1.5 bg-neutral-900 border border-neutral-800 px-3 py-1.5 rounded-xl text-xs">
               <Flame className="w-4 h-4 text-amber-500" />
-              <span className="text-neutral-400 font-mono-code text-[11px]">今日打卡:</span>
+              <span className="text-neutral-400 font-mono-code text-[11px] hidden sm:inline">今日打卡:</span>
               <span className="font-bold text-amber-400 font-mono-code">{completedTodayCount} 幅</span>
             </div>
 
@@ -446,7 +446,7 @@ export default function App() {
               id="btn-open-records"
               type="button"
               onClick={() => setIsRecordsOpen(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition-all"
+              className="flex items-center shrink-0 gap-1.5 px-3 py-1.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition-all"
               title="查看历史记录与每日打卡日历"
             >
               <Calendar className="w-4 h-4 text-cyan-400" />
@@ -458,7 +458,7 @@ export default function App() {
               id="btn-open-pool-manager"
               type="button"
               onClick={() => setIsPoolManagerOpen(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition-all"
+              className="flex items-center shrink-0 gap-1.5 px-3 py-1.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 text-neutral-300 hover:text-white text-xs font-medium transition-all"
               title="管理自定义词库"
             >
               <Database className="w-4 h-4 text-purple-400" />
@@ -469,7 +469,7 @@ export default function App() {
             <button
               type="button"
               onClick={toggleSound}
-              className={`p-2 rounded-xl border text-xs transition-colors ${
+              className={`p-2 shrink-0 rounded-xl border text-xs transition-colors ${
                 soundEnabled
                   ? 'bg-neutral-900 border-neutral-800 text-amber-400'
                   : 'bg-neutral-900 border-neutral-800 text-neutral-600'
@@ -484,18 +484,18 @@ export default function App() {
               id="btn-open-install-guide"
               type="button"
               onClick={() => setIsInstallGuideOpen(true)}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 hover:text-amber-200 text-xs font-semibold transition-all shadow-sm shadow-amber-500/5"
+              className="flex items-center shrink-0 gap-1.5 px-3 py-1.5 rounded-xl bg-amber-500/10 hover:bg-amber-500/20 border border-amber-500/30 text-amber-300 hover:text-amber-200 text-xs font-semibold transition-all shadow-sm shadow-amber-500/5"
               title="查看安卓手机安装/打包指南与链接"
             >
               <Smartphone className="w-4 h-4 text-amber-400" />
-              <span>手机安装</span>
+              <span className="hidden sm:inline">手机安装</span>
             </button>
 
             {/* Mobile / Desktop Simulator Toggle */}
             <button
               type="button"
               onClick={() => setIsMobileMode(!isMobileMode)}
-              className={`p-2 rounded-xl border text-xs transition-colors ${
+              className={`p-2 shrink-0 rounded-xl border text-xs transition-colors ${
                 isMobileMode
                   ? 'bg-amber-500/20 border-amber-500/40 text-amber-400'
                   : 'bg-neutral-900 border-neutral-800 text-neutral-400 hover:text-neutral-200'
